@@ -1,28 +1,30 @@
 /// Eventos :
 // o eventListner recebe tres parametros:
 //addEventListener('click', callback, Option)
-// click: o tipo de evento.
+// click: o tipo de evento sera sempre uma string
 // callback : sera um tipo de funcao.
 // option
 
-// event : sera o primeiro paramentro do callback
-// currentTarget : mostra o grupo geral.
-// target: mostra exataemente o elemento detro do grupo que foi clicado.
+// === event
+// :o primerioro parametro do callback sera referente ao evento que ocorreu.
+// o evento podera ter varias propriedades. ex: event.currentTarget.
 
-// const img = document.querySelector("img");
+// === Boa pratica: Separa a funcao do callback, ex:
 
-// function callBack(event) {
-//   console.log(event.target);
+//======= exemplo de target e currentTarget ========
+// const animaisLista = document.querySelector(".animais-lista");
+
+// function funcAnimais(event) {
+//   console.log(event.currentTarget); // o currentTarget sempre sera o elemento que esta escutando o evento.
+//   console.log(event.target); // o target sera o elemento que disparou o evento.
 // }
+// animaisLista.addEventListener("click", funcAnimais);
 
-// img.addEventListener("click", callBack);
+//====== eventDefault:
+// event.preventDefault() => e um metodo de event que previne o comportamento padrao de um evento
+//ex: previnir o compartamento padrao de um link, que direciona para paginas externoas.
 
-// const imagensLista = document.querySelectorAll(".animais-lista");
-
-// function callbackLista(event) {
-//   console.log(event.curretTart);
-// }
-// imagensLista.addEventListener("click", callbackLista);
+const previne = d
 
 // const preventLink = document.querySelector('a[href^="https"]');
 
@@ -70,5 +72,5 @@
 //   item.addEventListener("click", funcao);
 // });
 
-const linkInterno = document.querySelector();
-const pera = documento.querySelector('a[href^="http"]');
+// const linkInterno = document.querySelector();
+// const pera = documento.querySelector('a[href^="http"]');
