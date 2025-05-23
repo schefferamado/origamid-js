@@ -1,9 +1,51 @@
-/// Eventos :
+///======= Eventos :
 // o eventListner recebe tres parametros:
 //addEventListener('click', callback, Option)
 // click: o tipo de evento sera sempre uma string
 // callback : sera um tipo de funcao.
-// option
+// option:
+
+const img = document.querySelector("img");
+
+img.addEventListener("click", () => {
+  alert("clicou");
+});
+
+//
+
+const animaisLista = document.querySelector(".animais-lista");
+
+function callBack(event) {
+  console.log(event.currentTarget);
+  console.log(event.target);
+}
+
+const linkInterno = document.querySelector('a[href^="https"]');
+
+function callBack(event) {
+  event.preventDefault();
+  //const attr = this.getAttribute("href");
+  if (this.getAttribute("href") === "https://www.origamid.com/") {
+    alert("igual");
+  }
+}
+linkInterno.addEventListener("mouseover", callBack);
+
+function funcWindow() {
+  window.addEventListener("resize", () => {
+    alert("resized");
+  });
+}
+
+const h1 = document.querySelector("h1");
+
+function handleEvent(event) {
+  if (event.key === "b") {
+    document.body.classList.toggle("azul");
+  }
+}
+
+window.addEventListener("keydown", handleEvent);
 
 // === event
 // :o primerioro parametro do callback sera referente ao evento que ocorreu.
@@ -23,8 +65,6 @@
 //====== eventDefault:
 // event.preventDefault() => e um metodo de event que previne o comportamento padrao de um evento
 //ex: previnir o compartamento padrao de um link, que direciona para paginas externoas.
-
-const previne = d
 
 // const preventLink = document.querySelector('a[href^="https"]');
 

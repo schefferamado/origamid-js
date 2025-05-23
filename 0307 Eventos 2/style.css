@@ -11,6 +11,10 @@ dl {
   padding: 0px;
 }
 
+.azul {
+  background-color: blue;
+}
+
 body.texto-maior {
   font-size: larger;
 }

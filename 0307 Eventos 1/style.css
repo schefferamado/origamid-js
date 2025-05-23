@@ -20,6 +20,10 @@ ul {
   list-style: none;
 }
 
+.azul {
+  background-color: blue;
+}
+
 body {
   background: #faf6ed;
   color: #222;

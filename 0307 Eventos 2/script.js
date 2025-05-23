@@ -1,70 +1,67 @@
+//==== forEach e eventos
+
 // const imgSrc = document.querySelectorAll("img");
 
-// function funcImg(event) {
-//   const src = event.currentTarget.getAttribute("src");
-//   console.log(src);
-// }
+const imgs = document.querySelectorAll("img");
 
-// imgSrc.forEach((img) => {
-//   img.addEventListener("click", funcImg);
-// });
+function imgSrc(event) {
+  const src = event.currentTarget.getAttribute("src");
+  console.log(src, this);
+}
+
+imgs.forEach((img) => {
+  img.addEventListener("click", imgSrc);
+});
 
 // Exercicios
 
-// Quando o usuário clicar nos links internos do site,
+// 1)Quando o usuário clicar nos links internos do site,
 // adicione a classe ativo ao item clicado e remova dos
 // demais itens caso eles possuam a mesma. Previna
-// o comportamento padrão desses links
+// o comportamento padrão desses links.
 
-// const internalLinks = document.querySelectorAll('a[href^="#"]');
+const linkInterno = document.querySelectorAll('a[href^="#"]');
 
-// function hadleClick(event) {
-//   event.preventDefault();
-//   internalLinks.forEach((link) => {
-//     link.classList.remove("ativo");
-//   });
-//   this.classList.add("ativo");
-//   console.log("adicionado com sucesso");
-// }
+function func(event) {
+  event.preventDefault();
 
-// internalLinks.forEach((link) => {
-//   link.addEventListener("click", hadleClick);
-// });
+  linkInterno.forEach((item) => {
+    item.classList.remove("azul");
+  });
+  event.currentTarget.classList.toggle("azul");
+}
 
-// Selecione todos os elementos do site começando a partir do body,
+linkInterno.forEach((item) => {
+  item.addEventListener("click", func);
+});
+
+// 2)Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
 
-// const allElementos = document.querySelectorAll("body *");
-
-// function handleEl(event) {
+// function func1(event) {
 //   console.log(event.currentTarget);
 // }
 
-// allElementos.forEach((el) => {
-//   el.addEventListener("click", handleEl);
+// const all = document.querySelectorAll("body *");
+// all.forEach((item) => {
+//   item.addEventListener("click", func1);
 // });
 
-// Utilizando o código anterior, ao invés de mostrar no console,
+// 3) Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
 
-// const allElementos = document.querySelectorAll("body *");
-
-// function printEl(e) {
-//   e.target.remove();
+// function func2(event) {
+//   console.log(event.currentTarget.remove());
 // }
 
-// allElementos.forEach((item) => {
-//   item.addEventListener("click", printEl);
+// const al = document.querySelectorAll("body *");
+// al.forEach((item) => {
+//   item.addEventListener("click", func2);
 // });
 
 // Se o usuário clicar na tecla (t), aumente todo o texto do site.
 
-function hadleKeyDow(event) {
-  if (event.key === "t") {
-    document.documentElementclassList.toggle("texto-maior");
-  } else {
-    console.log(event.key);
-  }
+function func3(event) {
+  if (event.key === "t") e;
 }
-
-window.addEventListener("keydown", hadleKeyDow);
+window.addEventListener("keydown", func3);
