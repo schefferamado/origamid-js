@@ -20,20 +20,19 @@ imgs.forEach((img) => {
 // demais itens caso eles possuam a mesma. Previna
 // o comportamento padrão desses links.
 
-const linkInterno = document.querySelectorAll('a[href^="#"]');
+// const links = document.querySelectorAll('a[href^="#"]');
 
-function func(event) {
-  event.preventDefault();
+// function callfunc(event) {
+//   event.preventDefault();
+//   links.forEach((item) => {
+//     item.classList.remove("ativo");
+//   });
+//   event.target.classList.toggle("ativo");
+// }
 
-  linkInterno.forEach((item) => {
-    item.classList.remove("azul");
-  });
-  event.currentTarget.classList.toggle("azul");
-}
-
-linkInterno.forEach((item) => {
-  item.addEventListener("click", func);
-});
+// links.forEach((item) => {
+//   item.addEventListener("click", callfunc);
+// });
 
 // 2)Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
@@ -50,18 +49,12 @@ linkInterno.forEach((item) => {
 // 3) Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
 
-// function func2(event) {
-//   console.log(event.currentTarget.remove());
-// }
-
-// const al = document.querySelectorAll("body *");
-// al.forEach((item) => {
-//   item.addEventListener("click", func2);
-// });
-
 // Se o usuário clicar na tecla (t), aumente todo o texto do site.
 
-function func3(event) {
-  if (event.key === "t") e;
+function callBack(event) {
+  if (event.key === "t") {
+    document.body.classList.add("texto-maior");
+  }
 }
-window.addEventListener("keydown", func3);
+
+window.addEventListener("keypress", callBack);
