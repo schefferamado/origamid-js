@@ -48,3 +48,5 @@
 // const newTitle = h1.cloneNode(true);
 // const faq = document.querySelector(".faq");
 // faq.appendChild(newTitle);
+
+//=========== 0309 NAVEGAÇÃO POR TABS ===================
