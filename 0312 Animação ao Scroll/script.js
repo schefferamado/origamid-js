@@ -40,3 +40,34 @@ function initAccordion() {
   }
 }
 initAccordion();
+
+// ======= 0311 Scroll Suave Link Interno =======
+
+function initScrollSuave() {
+  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"] ');
+
+  function scrollToSection(event) {
+    event.preventDefault();
+
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start", // Alinhe o bloco ao inicio
+    });
+
+    // Forma Alternativa
+    // const topo = section.offsetTop;
+    // window.scrollTo({
+    //   top: topo,
+    //   behavior: "smooth",
+    // });
+  }
+
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+}
+initScrollSuave();
+
+// =========0312 Animação ao Scroll=========
