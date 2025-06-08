@@ -23,3 +23,5 @@ ex:
 var frase = `isso e um teste`
 +frase; //NaN
 -frase; //NaN
+
+add esta linha
