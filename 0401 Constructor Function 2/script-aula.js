@@ -16,12 +16,5 @@
 // === Trasnformar o objeto acima em uma função construtora ===
 
 function Dom(seletor) {
-  (this.elemento = function () {
-    return document.querySelector(seletor);
-  }),
-    (this.ativor = function () {
-      this.elemento.classList.add("ativo");
-    });
+  this.ativa = function (seletor) {};
 }
-
-const lista = new Dom("ul");
