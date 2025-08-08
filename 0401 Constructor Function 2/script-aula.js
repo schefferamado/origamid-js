@@ -28,19 +28,18 @@
 //obs: sempre que utilizarmos a palavra chave reservada this, estamos criando ou acesso variaveis do objeto.
 // const Dom = {
 //   seletor: "li",
-
 //   elemento() {
 //     return document.querySelector(this.seletor);
 //   },
 //   ativar() {
-//     this.elemento().classList.add("teste");
+//     this.elemento().classList.add("active");
 //   },
 // };
+
 // Dom.seletor = "ul";
 // Dom.ativar();
 
 //==== Criando uma função construtora ========
-
 function Dom(seletor) {
   this.elemento = function () {
     return document.querySelector(seletor);
@@ -52,5 +51,6 @@ function Dom(seletor) {
 }
 
 const li = new Dom("li");
+const liLast = new Dom("li:last-child");
+liLast.ativar("active");
 const ul = new Dom("ul");
-ul.ativar("active");
