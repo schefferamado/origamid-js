@@ -37,3 +37,29 @@ Pessoa.prototype.profissao = function (profissaoTitle) {
 
 const adriano = new Pessoa("Adriano", 39);
 console.log(Pessoa.prototype);
+
+const danielle = new Pessoa("Danielle", 35);
+
+// O objeto criado, sempre vai procurar o método dentro do construtor, caso não encontre ele vai procurar no protótipo
+// ex:
+
+function Animal(categoria) {
+  this.categoria = categoria;
+  // this.tipo = function () {
+  //   return `${this.categoria} é executado dentro do construtor`;
+  // };
+}
+
+Animal.prototype.tipo = function () {
+  return `${this.categoria} executado dentro do protótipo`;
+};
+
+const perrito = new Animal("Cachrro");
+
+console.log(perrito.tipo());
+
+// A propriedade __proto__ é de uso exclusivo do navegador.
+
+// Herança de protótipo:
+
+// O que é o construtor Object?
