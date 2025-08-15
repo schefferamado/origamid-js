@@ -1,5 +1,5 @@
 // o prototype é o núcleo do JavaScript
-// os protótipos estão sempre ligados as funcções
+// os protótipos estão sempre ligados as funcções(não ao objeto)
 // Pode-se entender o prototype como um objeto que contém propriedades e métodos
 // que podem ser compartilhados entre todas as instâncias de uma função construtora
 // O prototype é um objeto que é adicionado automaticamente a todas as funções construtoras
