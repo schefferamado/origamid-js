@@ -20,7 +20,7 @@ Sempre que declararmos uma variável e não atibuimos um valor a ela, por padrã
 - if(-1)
 - if({})
 
-### verificando uma vari avel se e verdadeira ou false da seguinte forma
+### verificando uma vari avel se e verdadeira ou false da seguinte forma.
 
 console.log(!!variavel);
 
@@ -30,6 +30,6 @@ var nome = "Adriano";
 if(nome == "Adriano") // => retorna true;
 if(nome ==="adriano") //=> retorna false
 
-## Operador de negacao
+## Operador de negacao.
 
 # Podemos utilizar `!=` ou utilizar `!==`, este ultimi seria o restritamente
