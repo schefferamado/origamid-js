@@ -11,9 +11,9 @@ Sempre que declararmos uma variável e não atibuimos um valor a ela, por padrã
 - if(NaN)
 - if(null)
 - if(undefined)
-- if('') // ou "" ou ``
+- if('') // ou "" ou ``.
 
-## Expressoes que sempre dao true
+## Expressoes que sempre dao true.
 
 - if(true)
 - if(" ")
