@@ -43,3 +43,4 @@ console.log(lan);
 // Retorne a largura da janela
 const winSize = window.innerWidth;
 console.log(winSize);
+const a = docu;

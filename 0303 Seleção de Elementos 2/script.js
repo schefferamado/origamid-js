@@ -99,3 +99,6 @@ const pFooter = document.querySelectorAll("p[class='footer']");
 pFooter.forEach((item) => {
   console.log(item.innerText);
 });
+
+// uma HTMLCollection atualiza a quantidade de elementos em temṕo real.
+// uma noteList não atualiza a quantiade de elementos em tempo real.
