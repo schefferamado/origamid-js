@@ -69,11 +69,11 @@
 // Exercicios:
 // Mostre no console cada parágrado do site
 
-const pps = document.querySelectorAll("p");
+// const pps = document.querySelectorAll("p");
 
-pps.forEach((item) => {
-  return console.log(item);
-});
+// pps.forEach((item) => {
+//   return console.log(item);
+// });
 
 // const allps = document.querySelectorAll("p");
 // allps.forEach((item) => {
@@ -83,6 +83,56 @@ pps.forEach((item) => {
 // Mostre o texto dos parágrafos no console
 
 // Como corrigir os erros abaixo:
+// const imgs = document.querySelectorAll("img");
+
+// imgs.forEach((item, index) => {
+//   console.log(item, index);
+// });
+
+// let i = 0;
+// imgs.forEach(() => {
+//   console.log(i++);
+// });
+
+// imgs.forEach(() => i++);
+
+/// ==== a partir daqui estou refazendo a aula ====
+
+// const imgs = document.querySelectorAll("img");
+// imgs.forEach(function name(item, index, array) {
+//   console.log(array);
+// });
+
+// const titulos = document.getElementsByClassName("titulo");
+// const titulosArray = Array.from(titulos);
+// titulosArray.forEach(function name(item) {
+//   console.log(item.innerHTML);
+// });
+
+/// === Arrow Functions ===
+// const imgs = document.getElementsByClassName("titulo");
+// const arrayImgs = Array.from(imgs);
+
+// arrayImgs.forEach((item) => {
+//   console.log(item);
+// });
+
+//==== EXERCICIOS ===
+// 1) Mostre no console cada parágrafo do site:
+
+// const ps = document.querySelectorAll("p");
+// ps.forEach((item) => {
+//   console.log(item);
+// });
+
+// 2) Mostre o texto dos paragrafos no console.
+// const ps = document.querySelectorAll("p");
+// ps.forEach((item) => {
+//   console.log(item.innerHTML);
+// });
+
+// 3) corrija os erros abaixos:
+
 const imgs = document.querySelectorAll("img");
 
 imgs.forEach((item, index) => {
