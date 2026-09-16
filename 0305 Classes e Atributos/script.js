@@ -61,7 +61,7 @@
 
 // Adicione a classe ativo a todos os itens do menu
 
-const ativa = document.querySelectorAll(".menu a");
+// const ativa = document.querySelectorAll(".menu a");
 
 // ativa.forEach((item) => {
 //   item.setAttribute("class", "ativo");
@@ -78,15 +78,37 @@ const ativa = document.querySelectorAll(".menu a");
 // });
 
 // Verifique se as imagens possuem o atributo alt
-const altimg = document.querySelectorAll("img");
-altimg.forEach((img) => {
-  const possui = img.hasAttribute("alt");
-  console.log(img, possui);
-});
+// const altimg = document.querySelectorAll("img");
+// altimg.forEach((img) => {
+//   const possui = img.hasAttribute("alt");
+//   console.log(img, possui);
+// });
 
 // Modifique o href do link externo no menu
 
-const linkEx = document.querySelector('a[href^="h"]');
-linkEx.setAttribute("href", "google.com.br");
+// const linkEx = document.querySelector('a[href^="h"]');
+// linkEx.setAttribute("href", "google.com.br");
 
-console.log(linkEx);
+// console.log(linkEx);
+
+// ========= Revisao da aula ====
+
+const menu = document.querySelector(".menu");
+
+if (menu.classList.contains("menu")) {
+  // console.log("contem azul");
+}
+
+// attributes : retorna todos os atributos do elemento
+// getAttribute : va direto ao ponto, passamos como argumento o atributo que queremos saber se o elemento possui.
+
+// const animais = document.querySelector(".animais");
+// console.log(animais.attributes[1]);
+
+const img = document.querySelector("img");
+img.setAttribute("alt", "um atributo alt");
+img.hasAttribute("title");
+img.removeAttribute("alt");
+// console.log(img.getAttribute("alt"));
+
+// propriedades READ ONLY vs WRITABLE
